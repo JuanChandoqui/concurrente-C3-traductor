@@ -1,8 +1,10 @@
+from typing import Text
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import * 
 from PyQt5.QtWidgets import *
 import time
 import sys
+
 
 class EmittingStream(QtCore.QObject):  
         textWritten = QtCore.pyqtSignal(str)  # defines a signal that sends str 
@@ -15,10 +17,8 @@ class BackendThread(QThread):
 
      #  process business logic 
     def run(self):
-        while True:
-            data = QDateTime.currentDateTime()
-            currTime = data.toString("yyyy-MM-dd hh:mm:ss")
-            self.update_date.emit( str(currTime) )
+        while True:           
+            self.update_date.emit(str("text"))
             time.sleep(1)
 
 class Ui_MainWindow(object):
@@ -61,8 +61,7 @@ class Ui_MainWindow(object):
     def handleDisplay(self, data):
         cursor = self.textEdit.textCursor()  
         cursor.movePosition(QtGui.QTextCursor.End)
-        # self.textEdit.setText(data)
-        cursor.insertText(data + '\n')  
+        cursor.insertText(data)  
         self.textEdit.setTextCursor(cursor)  
         self.textEdit.ensureCursorVisible()
 
