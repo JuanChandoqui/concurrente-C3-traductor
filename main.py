@@ -59,7 +59,7 @@ class Window(QMainWindow):
             self.show_translation.insertPlainText(data)
             self.show_translation.setTextCursor(cursor)  
     
-    
+    # Initialize threads
     def initUI(self):
         self.backend = BackendThread()  #create a thread 
         self.backend.update_date.connect(self.handleDisplay)  #connect the signal 

@@ -1,5 +1,4 @@
 from deep_translator import GoogleTranslator
-from googletrans import Translator
 
 def translate_text(text:str, language: str):
     language_selected = language[0:2]
