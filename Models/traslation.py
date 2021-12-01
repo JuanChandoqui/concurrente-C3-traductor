@@ -1,12 +1,7 @@
-# from deep_translator import GoogleTranslator
-# from googletrans import Translator
-from translate import Translator
+from deep_translator import GoogleTranslator
+from googletrans import Translator
 
-def translate_text(text:str):
-    # translator = GoogleTranslator(source='auto', target='es').translate(text)
-    translator= Translator(to_lang="zh")
-    translation = translator.translate(text=text)
-    print(translation)
-    return translation
-
-# translate_text('hola como estan')
+def translate_text(text:str, language: str):
+    language_selected = language[0:2]
+    translated = GoogleTranslator(source='auto', target=language_selected).translate(text=text)
+    return translated 

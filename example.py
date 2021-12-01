@@ -5,18 +5,16 @@ from PyQt5.QtWidgets import *
 import time
 import sys
 
-
 class EmittingStream(QtCore.QObject):  
         textWritten = QtCore.pyqtSignal(str)  # defines a signal that sends str 
         def write(self, data):
             self.textWritten.emit(str(data)) 
 
 class BackendThread(QThread):
-     #  a signal is defined by a class member object 
-    update_date = pyqtSignal(str)
+    update_date = pyqtSignal(str) #a signal is defined by a class member object 
 
-     #  process business logic 
-    def run(self):
+     
+    def run(self): #  process business logic 
         while True:           
             self.update_date.emit(str("text"))
             time.sleep(1)

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>813</width>
-    <height>414</height>
+    <width>966</width>
+    <height>471</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
    <widget class="QTextEdit" name="text_edit">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>20</x>
       <y>110</y>
       <width>361</width>
       <height>201</height>
@@ -36,9 +36,9 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>410</x>
       <y>110</y>
-      <width>361</width>
+      <width>371</width>
       <height>201</height>
      </rect>
     </property>
@@ -68,6 +68,93 @@ color: rgb(255, 255, 255);</string>
     <property name="text">
      <string>TRADUCTOR DE PYTHON</string>
     </property>
+   </widget>
+   <widget class="QPushButton" name="button_exit">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>390</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 0, 0);
+color: rgb(255, 255, 255);
+border-radius: 10px;</string>
+    </property>
+    <property name="text">
+     <string>SALIR</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_languages">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>110</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(90, 90, 90);</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>es (Español)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>it (Italiano)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>en (Inglés)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>ja (Japonés)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>ar (Árabe)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>ko (Corea)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>pt (Portugués)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>ru (Ruso)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>de (Alemán)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>fr (Francés)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>nl (Holandés)</string>
+     </property>
+    </item>
    </widget>
   </widget>
  </widget>
